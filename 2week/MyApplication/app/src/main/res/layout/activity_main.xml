@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.haams.myapplication.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/haams"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="서울지부 총괄 매니저" />
+
+                <RadioButton
+                    android:id="@+id/wooyoung"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="서울지부 개발 팀장" />
+
+                <RadioButton
+                    android:id="@+id/jongmin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="서울지부 안드로이드 파트장" />
+
+                <RadioButton
+                    android:id="@+id/sungil"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="서울지부 기획 팀장" />
+
+                <RadioButton
+                    android:id="@+id/chaeyeon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="서울지부 웹 파트장" />
+
+                <RadioButton
+                    android:id="@+id/nakyung"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="서울지부 디자인 팀장" />
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="3">
+
+                <Button
+                    android:id="@+id/check"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="확인" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/call"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="전화걸기" />
+
+            <Button
+                android:id="@+id/facebook"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Facebook" />
+
+            <Button
+                android:id="@+id/next"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="다음 페이지" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
