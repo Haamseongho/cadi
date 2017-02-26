@@ -31,32 +31,12 @@ public class FirstPageActivity extends AppCompatActivity implements View.OnClick
         Toast.makeText(FirstPageActivity.this, gIntent.getStringExtra("name")
                 + "/" + gIntent.getStringExtra("age"), Toast.LENGTH_LONG).show();
 
-
-        initView();
-    }
-
-    private void initView() {
         gIntent = getIntent();
         name = gIntent.getStringExtra("name");
         age = gIntent.getStringExtra("age");
 
         Toast.makeText(FirstPageActivity.this, name + " / " + age + " 입니다.", Toast.LENGTH_LONG).show();
         findViewById(R.id.showImage).setOnClickListener(this);
-        //checkThings();
-    }
-
-    private void checkThings() {
-        frame = (FrameLayout) findViewById(R.id.mainFrame);
-        inflater = (LayoutInflater) getBaseContext().getSystemService(LAYOUT_INFLATER_SERVICE);
-        // attachToRoot . true
-        //inflater.inflate(R.layout.main_image, frame, true);
-        // attachToRoot . false
-        itemView = inflater.inflate(R.layout.main_image, frame, true);
-        mImage = (ImageView) itemView.findViewById(R.id.mainImage);
-
-        Glide.with(this)
-                .load(R.drawable.heart)
-                .fitCenter().into(mImage);
     }
 
     @Override
@@ -70,7 +50,13 @@ public class FirstPageActivity extends AppCompatActivity implements View.OnClick
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.showImage) {
-            checkThings();
+            frame = (FrameLayout) findViewById(R.id.mainFrame);
+            inflater = (LayoutInflater) getBaseContext().getSystemService(LAYOUT_INFLATER_SERVICE);
+            // attachToRoot . true
+            //inflater.inflate(R.layout.main_image, frame, true);
+            // attachToRoot . false
+            itemView = inflater.inflate(R.layout.main_image, frame, true);
+            mImage = (ImageView) itemView.findViewById(R.id.mainImage);
         }
     }
 }
