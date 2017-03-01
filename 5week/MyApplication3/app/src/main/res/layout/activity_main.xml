@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.haams.myapplication.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="70dp"
+                android:text="이름 :" />
+
+
+            <TextView
+                android:id="@+id/age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/name"
+                android:layout_below="@+id/name"
+                android:text="나이 :" />
+
+            <TextView
+                android:id="@+id/part"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/age"
+                android:layout_below="@+id/age"
+                android:text="지원분야 :" />
+
+
+            <TextView
+                android:id="@+id/gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/part"
+                android:layout_below="@+id/part"
+                android:layout_marginTop="10dp"
+                android:text="성별" />
+
+            <EditText
+                android:id="@+id/editName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/name"
+                android:layout_toRightOf="@+id/name"
+                android:hint="이름을 적어주세요"
+                android:textSize="10sp" />
+
+            <EditText
+                android:id="@+id/editAge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/age"
+                android:layout_toRightOf="@+id/age"
+                android:hint="나이를 적어주세요"
+                android:textSize="10sp" />
+
+            <EditText
+                android:id="@+id/editPart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/part"
+                android:layout_toRightOf="@+id/part"
+                android:hint="지원분야를 적어주세요"
+                android:textSize="10sp" />
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/gender"
+                android:layout_toEndOf="@+id/gender"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rBtn_male"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="남성" />
+
+                <RadioButton
+                    android:id="@+id/rBtn_female"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="여성" />
+            </RadioGroup>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2">
+
+        <Button
+            android:id="@+id/btnSignIn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="회원가입" />
+    </LinearLayout>
+</LinearLayout>
