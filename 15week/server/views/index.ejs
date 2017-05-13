@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+
+    <script src="https://www.gstatic.com/firebasejs/3.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.6.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.6.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.6.2/firebase-messaging.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyAHOWEFTgbjavRfZ9LHJnFPSFaxdDZHzuI",
+            authDomain: "cadistudy.firebaseapp.com",
+            databaseURL: "https://cadistudy.firebaseio.com",
+            projectId: "cadistudy",
+            storageBucket: "cadistudy.appspot.com",
+            messagingSenderId: "1075180149078"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+  </body>
+</html>

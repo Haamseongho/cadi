@@ -37,21 +37,13 @@ public class MainActivity extends AppCompatActivity {
     private void initViews() {
         mainView = (ViewPager) findViewById(R.id.viewPager);
         tabLayout = (TabLayout) findViewById(R.id.mainTab);
+
         initTabs();
         initToolBar();
         initSlideMenu();
 
     }
 
-    private void initToolBar() {
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitle("Between Together");
-        toolbar.setTitleMarginStart(60);
-        toolbar.setTitleMarginEnd(40);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setHomeButtonEnabled(true);
-    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -65,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
         tabLayout.setSelectedTabIndicatorColor(Color.BLACK);
         tabLayout.setSelectedTabIndicatorHeight(10);
         tabLayout.setBackgroundColor(Color.parseColor("#cccccc"));
-        tabLayout.addTab(tabLayout.newTab().setIcon(R.mipmap.ic_launcher));
+        tabLayout.addTab(tabLayout.newTab().setIcon(R.mipmap.ic_launcher).setText("친구찾기"));
         tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.ic_textsms_black_24dp));
         tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.ic_add_a_photo_black_24dp));
         tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.ic_notifications_active_black_24dp));
@@ -110,6 +102,17 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+    private void initToolBar() {
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle("Between Together");
+        toolbar.setTitleMarginStart(60);
+        toolbar.setTitleMarginEnd(40);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(true);
+    }
+
 
     private void initSlideMenu() {
         drawer = (DrawerLayout) findViewById(R.id.drawer);

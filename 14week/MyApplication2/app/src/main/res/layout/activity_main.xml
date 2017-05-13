@@ -17,10 +17,7 @@
             android:layout_height="50dp"
             android:id="@+id/toolbar"></android.support.v7.widget.Toolbar>
 
-        <android.support.design.widget.TabLayout
-            android:id="@+id/mainTab"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"></android.support.design.widget.TabLayout>
+        <include layout="@layout/tab_layout" />
 
         <include layout="@layout/viewpager_all_things" />
 
